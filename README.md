@@ -8,7 +8,6 @@
     <style>
         .button {
             display: inline-block;
-            background-color: #C13584; /* Instagram 颜色 */
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
@@ -18,9 +17,23 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
         }
-        .button:hover {
+        .button.youtube {
+            background-color: #FF0000; /* YouTube 颜色 */
+        }
+        .button.youtube:hover {
+            background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
+        }
+        .button.discord {
+            background-color: #7289DA; /* Discord 颜色 */
+        }
+        .button.discord:hover {
+            background-color: #5b6eae; /* Discord 颜色的深一点的变体 */
+        }
+        .button.instagram {
+            background-color: #C13584; /* Instagram 颜色 */
+        }
+        .button.instagram:hover {
             background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
-            transform: scale(1.05);
         }
     </style>
 </head>
@@ -30,18 +43,13 @@
     <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div>
-        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" 
-           style="display: inline-block; background-color: rgba(0, 0, 0, 0.7); color: #fff; padding: 15px 30px; text-decoration: none; font-size: 24px; border-radius: 5px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: background-color 0.3s, transform 0.3s;">
-           訪問我的頻道
+        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
+            <i class="fab fa-youtube"></i> YouTube
         </a>
-        <a href="https://discord.com/invite/e5cbzGFS3H" 
-           style="display: inline-block; background-color: #7289DA; color: #fff; padding: 15px 30px; text-decoration: none; font-size: 24px; border-radius: 5px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); transition: background-color 0.3s, transform 0.3s;">
-           加入我的 Discord
+        <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
+            <i class="fab fa-discord"></i> Discord
         </a>
-    </div>
-
-    <div style="margin-top: 20px;">
-        <a href="https://www.instagram.com/ru031314580/" class="button">
+        <a href="https://www.instagram.com/ru031314580/" class="button instagram">
             <i class="fab fa-instagram"></i> ru031314580
         </a>
     </div>
