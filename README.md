@@ -19,7 +19,6 @@
             position: relative;
             text-align: center;
             min-width: 250px;
-            height: auto;
             vertical-align: middle;
         }
         .button.youtube {
@@ -65,9 +64,10 @@
         }
         .video-section {
             flex: 1;
-            max-width: 100%;
+            max-width: 45%;
             padding: 10px;
             border-radius: 10px;
+            position: relative;
         }
         .video-section iframe {
             width: 100%;
@@ -75,9 +75,19 @@
             display: block;
             border: none;
         }
-        .video-section .youtube-icon {
+        .video-section .icon {
+            font-size: 40px;
+            position: absolute;
             top: 10px;
             left: 10px;
+            color: #fff;
+        }
+        .video-section .title {
+            position: absolute;
+            top: 10px;
+            left: 60px;
+            font-size: 18px;
+            color: #fff;
         }
     </style>
 </head>
@@ -102,19 +112,15 @@
     </div>
 
     <div class="video-container">
-        <div class="video-section">
-            <div class="button youtube" style="display: block; position: relative;">
-                <i class="fab fa-youtube"></i>
-                <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">YouTube 最多觀看量</span>
-                <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+        <div class="video-section" style="background-color: #FF0000;">
+            <i class="fab fa-youtube icon"></i>
+            <span class="title">YouTube 最多觀看量</span>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="video-section">
-            <div class="button instagram" style="display: block; position: relative;">
-                <i class="fab fa-instagram"></i>
-                <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">Instagram 視頻</span>
-                <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
-            </div>
+        <div class="video-section" style="background-color: #C13584;">
+            <i class="fab fa-instagram icon"></i>
+            <span class="title">Instagram 視頻</span>
+            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
