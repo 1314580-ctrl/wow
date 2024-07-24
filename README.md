@@ -1,17 +1,3 @@
-  <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1');
-            background-size: cover; /* 确保背景图像覆盖整个页面 */
-            background-position: center; /* 居中显示背景图像 */
-            background-repeat: no-repeat; /* 不重复背景图像 */
-            color: #fff; /* 设置文字颜色，确保在背景上可见 */
-            font-family: Arial, sans-serif; /* 设置字体 */
-            text-align: center; /* 使文字居中 */
-            height: 100vh; /* 确保背景图像覆盖整个视口高度 */
-        }
-        
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
