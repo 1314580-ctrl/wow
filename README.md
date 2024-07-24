@@ -18,9 +18,10 @@
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
             text-align: center;
-            min-width: 200px; /* 确保按钮宽度 */
+            min-width: 250px; /* 确保按钮宽度 */
             height: auto; /* 高度自适应内容 */
             background-color: #000; /* 按钮背景颜色 */
+            vertical-align: middle;
         }
         .button.youtube {
             background-color: #FF0000; /* YouTube 颜色 */
@@ -40,11 +41,6 @@
         .button.instagram:hover {
             background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
         .button i {
             font-size: 40px; /* 图示大小 */
             display: block;
@@ -53,6 +49,12 @@
         .button span {
             display: block;
             font-size: 18px; /* 文字大小 */
+            margin-top: 10px; /* 确保文字在图示下方 */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .video-container {
             display: flex;
