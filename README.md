@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的 YouTube 和 Discord</title>
 </head>
-<body style="margin: 0; padding: 0; background-image: url('https://via.placeholder.com/1366x641.png'); background-size: cover; background-position: center; background-repeat: no-repeat; text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh;">
+<body style="margin: 0; padding: 0; background-color: #f0f0f0; text-align: center; display: flex; justify-content: center; align-items: center; height: 100vh;">
 
     <div>
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" 
@@ -20,5 +20,3 @@
 
 </body>
 </html>
-
-
