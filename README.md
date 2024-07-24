@@ -9,32 +9,50 @@
         .button {
             display: inline-block;
             color: #fff;
-            padding: 0; /* Remove padding to fit video */
+            padding: 20px; /* 增加内边距以适应图示和文字 */
             text-decoration: none;
+            font-size: 24px; /* 文字大小 */
             border-radius: 5px;
             margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
-            width: 560px; /* Width for displaying video */
-            height: 315px; /* Height for displaying video */
-            overflow: hidden;
             text-align: center;
-            background-color: transparent; /* Transparent background for button */
+            min-width: 200px; /* 确保按钮宽度 */
+            height: auto; /* 高度自适应内容 */
+            background-color: #000; /* 按钮背景颜色 */
         }
         .button.youtube {
-            border: 3px solid #FF0000; /* YouTube border color */
+            background-color: #FF0000; /* YouTube 颜色 */
+        }
+        .button.youtube:hover {
+            background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
         }
         .button.discord {
-            border: 3px solid #7289DA; /* Discord border color */
+            background-color: #7289DA; /* Discord 颜色 */
+        }
+        .button.discord:hover {
+            background-color: #5b6eae; /* Discord 颜色的深一点的变体 */
         }
         .button.instagram {
-            border: 3px solid #C13584; /* Instagram border color */
+            background-color: #C13584; /* Instagram 颜色 */
+        }
+        .button.instagram:hover {
+            background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
         }
         .button-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+        }
+        .button i {
+            font-size: 40px; /* 图示大小 */
+            display: block;
+            margin-bottom: 10px;
+        }
+        .button span {
+            display: block;
+            font-size: 18px; /* 文字大小 */
         }
         .video-container {
             display: flex;
@@ -70,13 +88,16 @@
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
-            <i class="fab fa-youtube youtube-icon"></i> YouTube
+            <i class="fab fa-youtube"></i>
+            <span>YouTube</span>
         </a>
         <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
-            <i class="fab fa-discord"></i> Discord
+            <i class="fab fa-discord"></i>
+            <span>Discord</span>
         </a>
         <a href="https://www.instagram.com/ru031314580/" class="button instagram">
-            <i class="fab fa-instagram"></i> ru031314580
+            <i class="fab fa-instagram"></i>
+            <span>ru031314580</span>
         </a>
     </div>
 
