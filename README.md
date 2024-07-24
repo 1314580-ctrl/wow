@@ -18,13 +18,10 @@
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
             text-align: center;
-            width: 100%;
-            max-width: 800px;
+            width: 150px; /* Adjust width as needed */
         }
         .button.youtube {
             background-color: #FF0000; /* YouTube 颜色 */
-            overflow: hidden; /* Ensure icon and content stay within button */
-            padding: 0; /* Remove default padding */
         }
         .button.youtube:hover {
             background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
@@ -40,6 +37,11 @@
         }
         .button.instagram:hover {
             background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         .video-section {
             margin-top: 20px;
@@ -69,7 +71,7 @@
     <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
     <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
-    <div>
+    <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
             <i class="fab fa-youtube"></i> YouTube
         </a>
@@ -89,9 +91,18 @@
         </a>
     </div>
 
+    <div class="video-section">
+        <a href="#" class="button instagram" style="display: block;">
+            <i class="fab fa-instagram youtube-icon"></i>
+            <h2>Instagram 影片</h2>
+            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
+        </a>
+    </div>
+
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 你的名字。保留所有权利。
     </footer>
 
 </body>
 </html>
+
