@@ -19,18 +19,68 @@
             justify-content: center; 
             align-items: center; 
             height: 100vh;
+            overflow: hidden;
         }
 
-        h1 {
-            font-size: 36px; 
-            color: #333;
+        .welcome-text {
+            font-size: 48px;
+            color: #fff;
+            position: relative;
+            opacity: 1;
+            animation: fadeOut 4s forwards;
         }
-        
-        p {
-            font-size: 18px; 
-            color: #666;
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 1;
+            animation: confetti 4s forwards;
         }
-        
+
+        .confetti div {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            opacity: 0;
+            animation: confettiDrop 1s infinite;
+        }
+
+        @keyframes confetti {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes confettiDrop {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
         .button {
             display: inline-block;
             color: #fff;
@@ -124,8 +174,11 @@
     </style>
 </head>
 <body>
-    <h1>歡迎來到我的網站</h1>
-    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <div class="welcome-text">歡迎來到我的網站！</div>
+    <div class="confetti"></div>
+
+    <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
+    <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -158,6 +211,23 @@
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 ru03and1314580。保留所有权利。
     </footer>
+
+    <script>
+        // Create a function to add more confetti pieces dynamically
+        function generateConfetti() {
+            const confettiContainer = document.querySelector('.confetti');
+            for (let i = 0; i < 50; i++) {
+                const confettiPiece = document.createElement('div');
+                confettiPiece.style.top = `${Math.random() * 100}vh`;
+                confettiPiece.style.left = `${Math.random() * 100}vw`;
+                confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                confettiPiece.style.animationDelay = `${Math.random() * 4}s`;
+                confettiContainer.appendChild(confettiPiece);
+            }
+        }
+
+        // Generate confetti when the page loads
+        window.onload = generateConfetti;
+    </script>
 </body>
 </html>
-
