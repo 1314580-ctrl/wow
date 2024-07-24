@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -131,7 +130,7 @@
     </div>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 你的名字。保留所有权利。
+        © 2024 ru03and1314580。保留所有权利。
     </footer>
 
 </body>
@@ -139,22 +138,3 @@
 
 
 
-
-
-
-
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/66a0ec71becc2fed6929e5e4/1i3i9n7df';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
