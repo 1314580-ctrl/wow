@@ -21,16 +21,43 @@
             height: 100vh;
         }
 
-        h1 {
-            font-size: 36px; 
+        /* Welcome animation container */
+        #welcome-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .welcome-text {
+            font-size: 50px;
             color: #333;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-        p {
-            font-size: 18px; 
-            color: #666;
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background: #ff0;
+            opacity: 0.8;
+            animation: confetti-fall 3s infinite;
         }
-        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+        /* Buttons and other styles */
         .button {
             display: inline-block;
             color: #fff;
@@ -50,24 +77,24 @@
             overflow: hidden;
         }
         .button:hover {
-            transform: scale(1.05); /* Slightly enlarge the button */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
         .button:active {
-            transform: scale(0.95); /* Slightly shrink the button when clicked */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduce shadow on click */
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .button.youtube {
             background-color: #FF0000;
-            background: linear-gradient(45deg, #FF0000, #CC0000); /* Add gradient background */
+            background: linear-gradient(45deg, #FF0000, #CC0000);
         }
         .button.discord {
             background-color: #7289DA;
-            background: linear-gradient(45deg, #7289DA, #5b6eae); /* Add gradient background */
+            background: linear-gradient(45deg, #7289DA, #5b6eae);
         }
         .button.instagram {
             background-color: #C13584;
-            background: linear-gradient(45deg, #C13584, #a02d6d); /* Add gradient background */
+            background: linear-gradient(45deg, #C13584, #a02d6d);
         }
         .button i {
             font-size: 50px;
@@ -121,9 +148,23 @@
             border: none;
             margin-top: 60px;
         }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
+    <div id="welcome-container">
+        <div class="welcome-text">歡迎</div>
+        <!-- Add multiple confetti divs for the effect -->
+        <div class="confetti" style="background: #FF6347; left: 20%; animation-duration: 2.5s;"></div>
+        <div class="confetti" style="background: #FFD700; left: 40%; animation-duration: 3s;"></div>
+        <div class="confetti" style="background: #ADFF2F; left: 60%; animation-duration: 2s;"></div>
+        <div class="confetti" style="background: #1E90FF; left: 80%; animation-duration: 3.5s;"></div>
+    </div>
+
     <h1>歡迎來到我的網站</h1>
     <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
@@ -155,8 +196,18 @@
         </div>
     </div>
 
-    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 ru03and1314580。保留所有权利。
-    </footer>
+    <footer>© 2024 ru03and1314580。保留所有权利。</footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var welcomeContainer = document.getElementById('welcome-container');
+                welcomeContainer.style.opacity = '0';
+                setTimeout(function() {
+                    welcomeContainer.style.display = 'none';
+                }, 1000); // Delay to match the transition duration
+            }, 3000); // Duration to show the welcome message
+        });
+    </script>
 </body>
 </html>
