@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 YouTube 和 Discord</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 <body style="margin: 0; padding: 0; background-color: #f0f0f0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
 
     <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
@@ -15,10 +23,10 @@
     </div>
 
     <div style="margin-top: 20px;">
-        <a href="你的 Twitter 链接" style="font-size: 30px; color: #1DA1F2; margin: 0 10px; text-decoration: none;">
+        <a href="https://twitter.com/你的 Twitter 用户名" style="font-size: 30px; color: #1DA1F2; margin: 0 10px; text-decoration: none;">
             <i class="fab fa-twitter"></i>
         </a>
-        <a href="你的 Instagram 链接" style="font-size: 30px; color: #C13584; margin: 0 10px; text-decoration: none;">
+        <a href="https://www.instagram.com/ru031314580/" style="font-size: 30px; color: #C13584; margin: 0 10px; text-decoration: none;">
             <i class="fab fa-instagram"></i>
         </a>
         <a href="你的 Facebook 链接" style="font-size: 30px; color: #1877F2; margin: 0 10px; text-decoration: none;">
@@ -34,3 +42,4 @@
     </footer>
 
 </body>
+</html>
