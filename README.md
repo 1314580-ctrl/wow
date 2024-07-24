@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            margin: 0; 
-            padding: 0; 
-            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
+            margin: 0;
+            padding: 0;
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             overflow: hidden;
+            position: relative; /* Ensure confetti positioning is relative to body */
         }
 
         .welcome-text {
@@ -38,6 +39,7 @@
             height: 100vh;
             pointer-events: none;
             overflow: hidden;
+            z-index: 1; /* Ensure confetti is below text and other content */
         }
 
         .confetti div {
@@ -68,11 +70,6 @@
             }
         }
 
-        .confetti.top-left div { animation: confettiTopLeft 3s infinite; }
-        .confetti.top-right div { animation: confettiTopRight 3s infinite; }
-        .confetti.bottom-left div { animation: confettiBottomLeft 3s infinite; }
-        .confetti.bottom-right div { animation: confettiBottomRight 3s infinite; }
-
         @keyframes confettiTopLeft {
             0% { transform: translate(0, 0); }
             100% { transform: translate(-100vw, -100vh); }
@@ -93,6 +90,11 @@
             100% { transform: translate(100vw, 100vh); }
         }
 
+        .confetti.top-left div { animation: confettiTopLeft 3s infinite; }
+        .confetti.top-right div { animation: confettiTopRight 3s infinite; }
+        .confetti.bottom-left div { animation: confettiBottomLeft 3s infinite; }
+        .confetti.bottom-right div { animation: confettiBottomRight 3s infinite; }
+
         .button {
             display: inline-block;
             color: #fff;
@@ -110,6 +112,7 @@
             background-size: cover;
             background-position: center;
             overflow: hidden;
+            z-index: 2; /* Ensure buttons are above confetti */
         }
         .button:hover {
             transform: scale(1.05);
@@ -147,6 +150,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            z-index: 2; /* Ensure buttons are above confetti */
         }
         .video-container {
             display: flex;
