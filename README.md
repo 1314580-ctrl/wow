@@ -35,6 +35,7 @@
             z-index: 9999;
             opacity: 1;
             transition: opacity 1s ease-in-out;
+            overflow: hidden;
         }
         .welcome-text {
             font-size: 50px;
@@ -57,6 +58,18 @@
                 transform: translateY(100vh) rotate(720deg);
             }
         }
+        /* Additional confetti colors and positions */
+        .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
+        .confetti:nth-child(2) { background: #FFD700; left: 15%; animation-duration: 3s; }
+        .confetti:nth-child(3) { background: #ADFF2F; left: 25%; animation-duration: 2s; }
+        .confetti:nth-child(4) { background: #1E90FF; left: 35%; animation-duration: 3.5s; }
+        .confetti:nth-child(5) { background: #FF1493; left: 45%; animation-duration: 2.8s; }
+        .confetti:nth-child(6) { background: #FF4500; left: 55%; animation-duration: 3.2s; }
+        .confetti:nth-child(7) { background: #32CD32; left: 65%; animation-duration: 2.6s; }
+        .confetti:nth-child(8) { background: #00BFFF; left: 75%; animation-duration: 3.4s; }
+        .confetti:nth-child(9) { background: #FF8C00; left: 85%; animation-duration: 2.7s; }
+        .confetti:nth-child(10) { background: #DA70D6; left: 95%; animation-duration: 3s; }
+        
         /* Buttons and other styles */
         .button {
             display: inline-block;
@@ -159,18 +172,16 @@
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <!-- Add multiple confetti divs for the effect -->
-        <div class="confetti" style="background: #FF6347; left: 10%; animation-duration: 2.5s;"></div>
-        <div class="confetti" style="background: #FFD700; left: 20%; animation-duration: 3s;"></div>
-        <div class="confetti" style="background: #ADFF2F; left: 30%; animation-duration: 2s;"></div>
-        <div class="confetti" style="background: #1E90FF; left: 40%; animation-duration: 3.5s;"></div>
-        <div class="confetti" style="background: #FF6347; left: 50%; animation-duration: 2.5s;"></div>
-        <div class="confetti" style="background: #FFD700; left: 60%; animation-duration: 3s;"></div>
-        <div class="confetti" style="background: #ADFF2F; left: 70%; animation-duration: 2s;"></div>
-        <div class="confetti" style="background: #1E90FF; left: 80%; animation-duration: 3.5s;"></div>
-        <div class="confetti" style="background: #FF6347; left: 90%; animation-duration: 2.5s;"></div>
-        <div class="confetti" style="background: #FFD700; left: 15%; animation-duration: 3s;"></div>
-        <div class="confetti" style="background: #ADFF2F; left: 25%; animation-duration: 2s;"></div>
-        <div class="confetti" style="background: #1E90FF; left: 35%; animation-duration: 3.5s;"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
     </div>
 
     <h1>歡迎來到我的網站</h1>
