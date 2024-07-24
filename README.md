@@ -50,9 +50,6 @@
             color: #333;
             margin: 10px 0;
         }
-        .buttons-container {
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f0f0f0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
@@ -60,29 +57,22 @@
     <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
     <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
+    <div>
+        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
+            <i class="fab fa-youtube"></i> YouTube
+        </a>
+        <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
+            <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="https://www.instagram.com/ru031314580/" class="button instagram">
+            <i class="fab fa-instagram"></i> ru031314580
+        </a>
+    </div>
+
     <div class="video-section">
         <h2>最多觀看量的影片</h2>
         <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class="buttons-container">
-            <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-            <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
-                <i class="fab fa-discord"></i> Discord
-            </a>
-            <a href="https://www.instagram.com/ru031314580/" class="button instagram">
-                <i class="fab fa-instagram"></i> ru031314580
-            </a>
-        </div>
     </div>
-
-    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 你的名字。保留所有权利。
-    </footer>
-
-</body>
-</html>
-
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 你的名字。保留所有权利。
