@@ -9,47 +9,47 @@
         .button {
             display: inline-block;
             color: #fff;
-            padding: 20px; /* 增加内边距以适应图示和文字 */
+            padding: 20px;
             text-decoration: none;
-            font-size: 24px; /* 文字大小 */
+            font-size: 24px;
             border-radius: 5px;
             margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
             text-align: center;
-            min-width: 250px; /* 确保按钮宽度 */
-            height: auto; /* 高度自适应内容 */
-            background-color: #000; /* 按钮背景颜色 */
+            min-width: 250px;
+            height: auto;
             vertical-align: middle;
         }
         .button.youtube {
-            background-color: #FF0000; /* YouTube 颜色 */
+            background-color: #FF0000;
         }
         .button.youtube:hover {
-            background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
+            background-color: #CC0000;
         }
         .button.discord {
-            background-color: #7289DA; /* Discord 颜色 */
+            background-color: #7289DA;
         }
         .button.discord:hover {
-            background-color: #5b6eae; /* Discord 颜色的深一点的变体 */
+            background-color: #5b6eae;
         }
         .button.instagram {
-            background-color: #C13584; /* Instagram 颜色 */
+            background-color: #C13584;
         }
         .button.instagram:hover {
-            background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
+            background-color: #a02d6d;
         }
         .button i {
-            font-size: 40px; /* 图示大小 */
-            display: block;
-            margin-bottom: 10px;
+            font-size: 40px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
         .button span {
             display: block;
-            font-size: 18px; /* 文字大小 */
-            margin-top: 10px; /* 确保文字在图示下方 */
+            font-size: 18px;
+            margin-top: 60px;
         }
         .button-container {
             display: flex;
@@ -59,29 +59,25 @@
         .video-container {
             display: flex;
             justify-content: center;
-            gap: 20px; /* Space between videos */
+            gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
         .video-section {
             flex: 1;
-            max-width: 100%; /* Full width for video buttons */
-            padding: 10px; /* 增加内边距 */
-            border-radius: 10px; /* 增加圆角 */
+            max-width: 100%;
+            padding: 10px;
+            border-radius: 10px;
         }
         .video-section iframe {
             width: 100%;
-            height: 300px; /* 设置高度 */
+            height: 300px;
             display: block;
-            border: none; /* Remove default iframe border */
+            border: none;
         }
-        .youtube-icon {
-            position: absolute;
+        .video-section .youtube-icon {
             top: 10px;
             left: 10px;
-            font-size: 40px;
-            color: #fff;
-            z-index: 1;
         }
     </style>
 </head>
@@ -108,14 +104,14 @@
     <div class="video-container">
         <div class="video-section">
             <div class="button youtube" style="display: block; position: relative;">
-                <i class="fab fa-youtube youtube-icon"></i>
+                <i class="fab fa-youtube"></i>
                 <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">YouTube 最多觀看量</span>
                 <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class="video-section">
             <div class="button instagram" style="display: block; position: relative;">
-                <i class="fab fa-instagram youtube-icon"></i>
+                <i class="fab fa-instagram"></i>
                 <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">Instagram 視頻</span>
                 <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
             </div>
