@@ -39,7 +39,6 @@
             pointer-events: none;
             overflow: hidden;
             opacity: 1;
-            animation: confetti 4s forwards;
         }
 
         .confetti div {
@@ -50,15 +49,6 @@
             border-radius: 50%;
             opacity: 0;
             animation: confettiDrop 1s infinite;
-        }
-
-        @keyframes confetti {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
         }
 
         @keyframes confettiDrop {
@@ -231,3 +221,4 @@
     </script>
 </body>
 </html>
+
