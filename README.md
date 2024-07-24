@@ -43,8 +43,16 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        .video-section {
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between videos */
             margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .video-container .video-section {
+            flex: 1;
+            max-width: 45%; /* Adjust width as needed */
         }
         .video-section iframe {
             width: 100%;
@@ -83,20 +91,21 @@
         </a>
     </div>
 
-    <div class="video-section">
-        <a href="#" class="button youtube" style="display: block;">
-            <i class="fab fa-youtube youtube-icon"></i>
-            <h2>最多觀看量的影片</h2>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </a>
-    </div>
-
-    <div class="video-section">
-        <a href="#" class="button instagram" style="display: block;">
-            <i class="fab fa-instagram youtube-icon"></i>
-            <h2>Instagram 影片</h2>
-            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
-        </a>
+    <div class="video-container">
+        <div class="video-section">
+            <a href="#" class="button youtube" style="display: block;">
+                <i class="fab fa-youtube youtube-icon"></i>
+                <h2>最多觀看量的影片</h2>
+                <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </a>
+        </div>
+        <div class="video-section">
+            <a href="#" class="button instagram" style="display: block;">
+                <i class="fab fa-instagram youtube-icon"></i>
+                <h2>Instagram 影片</h2>
+                <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
+            </a>
+        </div>
     </div>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
@@ -105,4 +114,3 @@
 
 </body>
 </html>
-
