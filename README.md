@@ -66,6 +66,9 @@
         .video-section {
             flex: 1;
             max-width: 100%; /* Full width for video buttons */
+            border: 5px solid #333; /* 增加边框 */
+            padding: 10px; /* 增加内边距 */
+            border-radius: 10px; /* 增加圆角 */
         }
         .video-section iframe {
             width: 100%;
