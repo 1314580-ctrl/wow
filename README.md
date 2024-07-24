@@ -109,15 +109,15 @@
         <div class="video-section">
             <div class="button youtube" style="display: block; position: relative;">
                 <i class="fab fa-youtube youtube-icon"></i>
+                <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">YouTube 最多觀看量</span>
                 <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <span style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">YouTube 最多觀看量</span>
             </div>
         </div>
         <div class="video-section">
             <div class="button instagram" style="display: block; position: relative;">
                 <i class="fab fa-instagram youtube-icon"></i>
+                <span style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">Instagram 視頻</span>
                 <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
-                <span style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">Instagram 視頻</span>
             </div>
         </div>
     </div>
