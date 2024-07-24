@@ -145,32 +145,16 @@
 
 
 
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
-    <!-- 你的其他头部代码 -->
-</head>
-<body>
-    <!-- 你的网站内容 -->
-
-    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 你的名字。保留所有权利。
-    </footer>
-
-    <!-- Tawk.to 聊天小部件嵌入代码 -->
-    <script>
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var script = document.createElement("script");
-            script.async = true;
-            script.src = 'https://embed.tawk.to/1314580/default';
-            script.charset = 'UTF-8';
-            script.setAttribute('crossorigin', '*');
-            document.head.appendChild(script);
-        })();
-    </script>
-</body>
-</html>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66a0ec71becc2fed6929e5e4/1i3i9n7df';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
