@@ -232,5 +232,21 @@
     <script>
         // Create a function to add more confetti pieces dynamically
         function generateConfetti() {
-            const confettiContainers = document.querySelector
+            const confettiContainers = document.querySelectorAll('.confetti');
+            confettiContainers.forEach(container => {
+                for (let i = 0; i < 100; i++) { // Increased number of confetti pieces
+                    const confettiPiece = document.createElement('div');
+                    confettiPiece.style.top = `${Math.random() * 100}vh`;
+                    confettiPiece.style.left = `${Math.random() * 100}vw`;
+                    confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                    confettiPiece.style.animationDelay = `${Math.random() * 4}s`;
+                    container.appendChild(confettiPiece);
+                }
+            });
+        }
 
+        // Generate confetti when the page loads
+        window.onload = generateConfetti;
+    </script>
+</body>
+</html>
