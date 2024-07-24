@@ -19,99 +19,18 @@
             justify-content: center; 
             align-items: center; 
             height: 100vh;
-            overflow: hidden;
         }
 
-        .welcome-text {
-            font-size: 48px;
-            color: #fff;
-            position: relative;
-            opacity: 1;
-            animation: fadeOut 5s forwards;
-            z-index: 3; /* Ensure it's above confetti */
+        h1 {
+            font-size: 36px; 
+            color: #333;
         }
-
-        .confetti {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 1; /* Below buttons and text */
+        
+        p {
+            font-size: 18px; 
+            color: #666;
         }
-
-        .confetti div {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            animation: confettiDrop 3s infinite;
-        }
-
-        @keyframes confettiDrop {
-            0% {
-                opacity: 1;
-                transform: translateY(0) rotate(0);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(100vh) rotate(360deg);
-            }
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-
-        .confetti.top-left div {
-            animation: confettiTopLeft 3s infinite;
-        }
-        .confetti.top-right div {
-            animation: confettiTopRight 3s infinite;
-        }
-        .confetti.bottom-left div {
-            animation: confettiBottomLeft 3s infinite;
-        }
-        .confetti.bottom-right div {
-            animation: confettiBottomRight 3s infinite;
-        }
-
-        @keyframes confettiTopLeft {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-100vw, -100vh); }
-        }
-
-        @keyframes confettiTopRight {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(100vw, -100vh); }
-        }
-
-        @keyframes confettiBottomLeft {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-100vw, 100vh); }
-        }
-
-        @keyframes confettiBottomRight {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(100vw, 100vh); }
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            z-index: 2; /* Ensure it is above confetti and background */
-            position: relative;
-        }
-
+        
         .button {
             display: inline-block;
             color: #fff;
@@ -131,24 +50,24 @@
             overflow: hidden;
         }
         .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05); /* Slightly enlarge the button */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
         }
         .button:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transform: scale(0.95); /* Slightly shrink the button when clicked */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduce shadow on click */
         }
         .button.youtube {
             background-color: #FF0000;
-            background: linear-gradient(45deg, #FF0000, #CC0000);
+            background: linear-gradient(45deg, #FF0000, #CC0000); /* Add gradient background */
         }
         .button.discord {
             background-color: #7289DA;
-            background: linear-gradient(45deg, #7289DA, #5b6eae);
+            background: linear-gradient(45deg, #7289DA, #5b6eae); /* Add gradient background */
         }
         .button.instagram {
             background-color: #C13584;
-            background: linear-gradient(45deg, #C13584, #a02d6d);
+            background: linear-gradient(45deg, #C13584, #a02d6d); /* Add gradient background */
         }
         .button i {
             font-size: 50px;
@@ -162,13 +81,17 @@
             font-size: 18px;
             margin-top: 60px;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .video-container {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
-            z-index: 2; /* Ensure it is above confetti */
         }
         .video-section {
             flex: 1;
@@ -201,15 +124,8 @@
     </style>
 </head>
 <body>
-    <div class="welcome-text">歡迎來到我的網站！</div>
-
-    <div class="confetti top-left"></div>
-    <div class="confetti top-right"></div>
-    <div class="confetti bottom-left"></div>
-    <div class="confetti bottom-right"></div>
-
-    <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
-    <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <h1>歡迎來到我的網站</h1>
+    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -242,23 +158,5 @@
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 ru03and1314580。保留所有权利。
     </footer>
-
-    <script>
-        function generateConfetti() {
-            const confettiContainers = document.querySelectorAll('.confetti');
-            confettiContainers.forEach(container => {
-                for (let i = 0; i < 50; i++) { 
-                    const confettiPiece = document.createElement('div');
-                    confettiPiece.style.top = `${Math.random() * 100}vh`;
-                    confettiPiece.style.left = `${Math.random() * 100}vw`;
-                    confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-                    confettiPiece.style.animationDelay = `${Math.random() * 3}s`;
-                    container.appendChild(confettiPiece);
-                }
-            });
-        }
-
-        window.onload = generateConfetti;
-    </script>
 </body>
 </html>
