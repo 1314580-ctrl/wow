@@ -43,21 +43,19 @@
 
         .confetti div {
             position: absolute;
-            width: 20px; /* Increased size */
-            height: 20px; /* Increased size */
+            width: 15px; /* Increased size */
+            height: 15px; /* Increased size */
             background: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
             opacity: 0;
-            animation: confettiDrop 1s infinite;
+            animation: confettiDrop 2s infinite;
         }
 
         @keyframes confettiDrop {
             0% {
-                transform: translateY(0) rotate(0deg);
                 opacity: 1;
             }
             100% {
-                transform: translateY(100vh) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -69,6 +67,31 @@
             100% {
                 opacity: 0;
             }
+        }
+
+        .confetti.top-left div { animation: confettiTopLeft 2s infinite; }
+        .confetti.top-right div { animation: confettiTopRight 2s infinite; }
+        .confetti.bottom-left div { animation: confettiBottomLeft 2s infinite; }
+        .confetti.bottom-right div { animation: confettiBottomRight 2s infinite; }
+
+        @keyframes confettiTopLeft {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100vw, -100vh); }
+        }
+
+        @keyframes confettiTopRight {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100vw, -100vh); }
+        }
+
+        @keyframes confettiBottomLeft {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100vw, 100vh); }
+        }
+
+        @keyframes confettiBottomRight {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100vw, 100vh); }
         }
 
         .button {
@@ -165,7 +188,11 @@
 </head>
 <body>
     <div class="welcome-text">歡迎來到我的網站！</div>
-    <div class="confetti"></div>
+
+    <div class="confetti top-left"></div>
+    <div class="confetti top-right"></div>
+    <div class="confetti bottom-left"></div>
+    <div class="confetti bottom-right"></div>
 
     <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
     <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
@@ -205,19 +232,5 @@
     <script>
         // Create a function to add more confetti pieces dynamically
         function generateConfetti() {
-            const confettiContainer = document.querySelector('.confetti');
-            for (let i = 0; i < 100; i++) { // Increased number of confetti pieces
-                const confettiPiece = document.createElement('div');
-                confettiPiece.style.top = `${Math.random() * 100}vh`;
-                confettiPiece.style.left = `${Math.random() * 100}vw`;
-                confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-                confettiPiece.style.animationDelay = `${Math.random() * 4}s`;
-                confettiContainer.appendChild(confettiPiece);
-            }
-        }
+            const confettiContainers = document.querySelector
 
-        // Generate confetti when the page loads
-        window.onload = generateConfetti;
-    </script>
-</body>
-</html>
