@@ -1,32 +1,15 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url('你的圖片鏈接');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    text-align: center;
-}
-
-.channel-link, .discord-link {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
-    color: #fff; /* 白色文字 */
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 24px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 10px; /* 按鈕之間的間距 */
-}
-
-.channel-link:hover, .discord-link:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* 當鼠標懸停時改變背景顏色 */
-}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 YouTube 頻道</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="channel-link">訪問我的頻道</a>
+        <a href="https://discord.com/invite/e5cbzGFS3H" class="discord-link">加入我的 Discord</a>
+    </div>
+</body>
+</html>
