@@ -38,7 +38,6 @@
             height: 100vh;
             pointer-events: none;
             overflow: hidden;
-            opacity: 1;
         }
 
         .confetti div {
@@ -69,10 +68,10 @@
             }
         }
 
-        .confetti.top-left div { animation: confettiTopLeft 2s infinite; }
-        .confetti.top-right div { animation: confettiTopRight 2s infinite; }
-        .confetti.bottom-left div { animation: confettiBottomLeft 2s infinite; }
-        .confetti.bottom-right div { animation: confettiBottomRight 2s infinite; }
+        .confetti.top-left div { animation: confettiTopLeft 3s infinite; }
+        .confetti.top-right div { animation: confettiTopRight 3s infinite; }
+        .confetti.bottom-left div { animation: confettiBottomLeft 3s infinite; }
+        .confetti.bottom-right div { animation: confettiBottomRight 3s infinite; }
 
         @keyframes confettiTopLeft {
             0% { transform: translate(0, 0); }
