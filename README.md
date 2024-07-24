@@ -16,9 +16,15 @@
             margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
         }
         .button.youtube {
             background-color: #FF0000; /* YouTube 颜色 */
+            overflow: hidden; /* Ensure icon and content stay within button */
+            padding: 0; /* Remove default padding */
         }
         .button.youtube:hover {
             background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
@@ -37,18 +43,24 @@
         }
         .video-section {
             margin-top: 20px;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
         }
         .video-section iframe {
             width: 100%;
             height: 315px; /* Adjust height as needed */
+            display: block;
         }
         .video-section h2 {
             font-size: 24px;
             color: #333;
             margin: 10px 0;
+        }
+        .youtube-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 40px;
+            color: #fff;
+            z-index: 1;
         }
     </style>
 </head>
@@ -70,8 +82,11 @@
     </div>
 
     <div class="video-section">
-        <h2>最多觀看量的影片</h2>
-        <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="#" class="button youtube" style="display: block;">
+            <i class="fab fa-youtube youtube-icon"></i>
+            <h2>最多觀看量的影片</h2>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </a>
     </div>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
