@@ -69,12 +69,6 @@
             border-radius: 10px;
             position: relative;
         }
-        .video-section iframe {
-            width: 100%;
-            height: 300px;
-            display: block;
-            border: none;
-        }
         .video-section .icon {
             font-size: 40px;
             position: absolute;
@@ -88,6 +82,13 @@
             left: 60px;
             font-size: 18px;
             color: #fff;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: calc(100% - 80px);
+            display: block;
+            border: none;
+            margin-top: 60px;
         }
     </style>
 </head>
