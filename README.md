@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -117,7 +116,7 @@
     </div>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 你的名字。保留所有权利。
+        © 2024 ru03and1314580。保留所有权利。
     </footer>
 
 </body>
