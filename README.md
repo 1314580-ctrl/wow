@@ -23,11 +23,11 @@
         }
 
         .welcome-text {
-            font-size: 48px;
+            font-size: 72px; /* Increased size */
             color: #fff;
             position: relative;
             opacity: 1;
-            animation: fadeOut 4s forwards;
+            animation: fadeOut 5s forwards; /* Increased duration */
         }
 
         .confetti {
@@ -43,8 +43,8 @@
 
         .confetti div {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 20px; /* Increased size */
+            height: 20px; /* Increased size */
             background: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
             opacity: 0;
@@ -90,24 +90,24 @@
             overflow: hidden;
         }
         .button:hover {
-            transform: scale(1.05); /* Slightly enlarge the button */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
         .button:active {
-            transform: scale(0.95); /* Slightly shrink the button when clicked */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduce shadow on click */
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         .button.youtube {
             background-color: #FF0000;
-            background: linear-gradient(45deg, #FF0000, #CC0000); /* Add gradient background */
+            background: linear-gradient(45deg, #FF0000, #CC0000);
         }
         .button.discord {
             background-color: #7289DA;
-            background: linear-gradient(45deg, #7289DA, #5b6eae); /* Add gradient background */
+            background: linear-gradient(45deg, #7289DA, #5b6eae);
         }
         .button.instagram {
             background-color: #C13584;
-            background: linear-gradient(45deg, #C13584, #a02d6d); /* Add gradient background */
+            background: linear-gradient(45deg, #C13584, #a02d6d);
         }
         .button i {
             font-size: 50px;
@@ -206,7 +206,7 @@
         // Create a function to add more confetti pieces dynamically
         function generateConfetti() {
             const confettiContainer = document.querySelector('.confetti');
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 100; i++) { // Increased number of confetti pieces
                 const confettiPiece = document.createElement('div');
                 confettiPiece.style.top = `${Math.random() * 100}vh`;
                 confettiPiece.style.left = `${Math.random() * 100}vw`;
@@ -221,4 +221,3 @@
     </script>
 </body>
 </html>
-
