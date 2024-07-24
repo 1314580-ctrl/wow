@@ -23,11 +23,12 @@
         }
 
         .welcome-text {
-            font-size: 48px; /* 适中的字体大小 */
+            font-size: 48px;
             color: #fff;
             position: relative;
             opacity: 1;
             animation: fadeOut 5s forwards;
+            z-index: 3; /* Ensure it's above confetti */
         }
 
         .confetti {
@@ -38,7 +39,7 @@
             height: 100vh;
             pointer-events: none;
             overflow: hidden;
-            z-index: 1;
+            z-index: 1; /* Below buttons and text */
         }
 
         .confetti div {
@@ -70,7 +71,6 @@
             }
         }
 
-        /* 控制彩带发射的方向 */
         .confetti.top-left div {
             animation: confettiTopLeft 3s infinite;
         }
@@ -102,6 +102,14 @@
         @keyframes confettiBottomRight {
             0% { transform: translate(0, 0); }
             100% { transform: translate(100vw, 100vh); }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 2; /* Ensure it is above confetti and background */
+            position: relative;
         }
 
         .button {
@@ -154,19 +162,13 @@
             font-size: 18px;
             margin-top: 60px;
         }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            z-index: 2;
-        }
         .video-container {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
-            z-index: 2;
+            z-index: 2; /* Ensure it is above confetti */
         }
         .video-section {
             flex: 1;
@@ -228,37 +230,4 @@
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-section" style="background-color: #C13584;">
-            <i class="fab fa-instagram icon"></i>
-            <span class="title">Instagram 視頻</span>
-            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 ru03and1314580。保留所有权利。
-    </footer>
-
-    <script>
-        // Create a function to add more confetti pieces dynamically
-        function generateConfetti() {
-            const confettiContainers = document.querySelectorAll('.confetti');
-            confettiContainers.forEach(container => {
-                for (let i = 0; i < 50; i++) { // 减少彩带数量以便于测试
-                    const confettiPiece = document.createElement('div');
-                    confettiPiece.style.top = `${Math.random() * 100}vh`;
-                    confettiPiece.style.left = `${Math.random() * 100}vw`;
-                    confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
-                    confettiPiece.style.animationDelay = `${Math.random() * 3}s`;
-                    container.appendChild(confettiPiece);
-                }
-            });
-        }
-
-        // Generate confetti when the page loads
-        window.onload = generateConfetti;
-    </script>
-</body>
-</html>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow
