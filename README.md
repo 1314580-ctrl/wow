@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +17,22 @@
             text-align: center; /* 使文字居中 */
             height: 100vh; /* 确保背景图像覆盖整个视口高度 */
         }
+        .button {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 24px;
+            border-radius: 5px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: scale(1.05);
+        
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
