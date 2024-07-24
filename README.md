@@ -35,6 +35,36 @@
         .button.instagram:hover {
             background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
         }
+        .video-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .most-viewed {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        .most-viewed iframe {
+            width: 100%;
+            height: 315px; /* Adjust height as needed */
+        }
+        .most-viewed h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #f0f0f0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
@@ -52,6 +82,11 @@
         <a href="https://www.instagram.com/ru031314580/" class="button instagram">
             <i class="fab fa-instagram"></i> ru031314580
         </a>
+    </div>
+
+    <div class="most-viewed">
+        <h2>最多觀看量的影片</h2>
+        <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
