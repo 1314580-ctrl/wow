@@ -19,7 +19,11 @@
             position: relative;
             text-align: center;
             min-width: 250px;
+            height: 150px; /* Adjust height to fit icon and text */
             vertical-align: middle;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
         }
         .button.youtube {
             background-color: #FF0000;
@@ -40,10 +44,11 @@
             background-color: #a02d6d;
         }
         .button i {
-            font-size: 40px;
+            font-size: 50px;
             position: absolute;
             top: 10px;
-            left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .button span {
             display: block;
