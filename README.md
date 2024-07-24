@@ -230,4 +230,35 @@
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-section" style="background-color: #C13584;">
+            <i class="fab fa-instagram icon"></i>
+            <span class="title">Instagram 視頻</span>
+            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
+        © 2024 ru03and1314580。保留所有权利。
+    </footer>
+
+    <script>
+        function generateConfetti() {
+            const confettiContainers = document.querySelectorAll('.confetti');
+            confettiContainers.forEach(container => {
+                for (let i = 0; i < 50; i++) { 
+                    const confettiPiece = document.createElement('div');
+                    confettiPiece.style.top = `${Math.random() * 100}vh`;
+                    confettiPiece.style.left = `${Math.random() * 100}vw`;
+                    confettiPiece.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                    confettiPiece.style.animationDelay = `${Math.random() * 3}s`;
+                    container.appendChild(confettiPiece);
+                }
+            });
+        }
+
+        window.onload = generateConfetti;
+    </script>
+</body>
+</html>
