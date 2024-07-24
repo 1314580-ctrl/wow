@@ -6,34 +6,6 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 20px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
         .button {
             display: inline-block;
             color: #fff;
@@ -41,11 +13,16 @@
             text-decoration: none;
             font-size: 24px;
             border-radius: 5px;
-            text-align: center;
-            min-width: 150px;
-            height: 150px;
-            position: relative;
+            margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            text-align: center;
+            min-width: 250px;
+            height: 150px; /* Adjust height to fit icon and text */
+            vertical-align: middle;
+            background-size: cover;
+            background-position: center;
             overflow: hidden;
         }
         .button.youtube {
@@ -78,20 +55,24 @@
             font-size: 18px;
             margin-top: 60px;
         }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .video-container {
             display: flex;
             justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         .video-section {
             flex: 1;
             max-width: 45%;
-            position: relative;
+            padding: 10px;
             border-radius: 10px;
-            overflow: hidden;
-            background-color: #000;
+            position: relative;
         }
         .video-section .icon {
             font-size: 40px;
@@ -109,20 +90,17 @@
         }
         .video-section iframe {
             width: 100%;
-            height: 300px; /* Adjust height as needed */
+            height: calc(100% - 80px);
+            display: block;
             border: none;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #666;
+            margin-top: 60px;
         }
     </style>
 </head>
-<body>
+<body style="margin: 0; padding: 0; background-color: #f0f0f0; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
 
-    <h1>歡迎來到我的網站</h1>
-    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
+    <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -140,19 +118,19 @@
     </div>
 
     <div class="video-container">
-        <div class="video-section">
+        <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="video-section">
+        <div class="video-section" style="background-color: #C13584;">
             <i class="fab fa-instagram icon"></i>
             <span class="title">Instagram 視頻</span>
-            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" allowfullscreen></iframe>
+            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
-    <footer>
+    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 你的名字。保留所有权利。
     </footer>
 
