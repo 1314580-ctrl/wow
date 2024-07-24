@@ -9,16 +9,18 @@
         .button {
             display: inline-block;
             color: #fff;
-            padding: 15px 30px;
+            padding: 0; /* Remove padding to fit video */
             text-decoration: none;
-            font-size: 24px;
             border-radius: 5px;
             margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: background-color 0.3s, transform 0.3s;
             position: relative;
+            width: 560px; /* Width for displaying video */
+            height: 315px; /* Height for displaying video */
+            overflow: hidden;
             text-align: center;
-            width: 150px; /* Adjust width as needed */
+            background-color: #000; /* Background color for button */
         }
         .button.youtube {
             background-color: #FF0000; /* YouTube 颜色 */
@@ -50,13 +52,13 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-        .video-container .video-section {
+        .video-section {
             flex: 1;
-            max-width: 45%; /* Adjust width as needed */
+            max-width: 100%; /* Full width for video buttons */
         }
         .video-section iframe {
             width: 100%;
-            height: 315px; /* Adjust height as needed */
+            height: 100%;
             display: block;
         }
         .video-section h2 {
@@ -95,18 +97,22 @@
         <div class="video-section">
             <a href="#" class="button youtube" style="display: block;">
                 <i class="fab fa-youtube youtube-icon"></i>
-                <h2>最多觀看量的影片</h2>
                 <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </div>
         <div class="video-section">
             <a href="#" class="button instagram" style="display: block;">
-                <i class="fab fa-instagram youtube-icon"></i>
-                <h2>Instagram 影片</h2>
                 <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
             </a>
         </div>
     </div>
+
+    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
+        © 2024 你的名字。保留所有权利。
+    </footer>
+
+</body>
+</html>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 你的名字。保留所有权利。
