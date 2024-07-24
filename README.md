@@ -23,7 +23,7 @@
     </div>
 
     <div style="margin-top: 20px;">
-        <a href="https://twitter.com/你的 Twitter 用户名" style="font-size: 30px; color: #1DA1F2; margin: 0 10px; text-decoration: none;">
+        <a href="你的 Twitter 链接" style="font-size: 30px; color: #1DA1F2; margin: 0 10px; text-decoration: none;">
             <i class="fab fa-twitter"></i>
         </a>
         <a href="https://www.instagram.com/ru031314580/" style="font-size: 30px; color: #C13584; margin: 0 10px; text-decoration: none;">
