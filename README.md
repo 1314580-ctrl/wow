@@ -159,10 +159,18 @@
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <!-- Add multiple confetti divs for the effect -->
-        <div class="confetti" style="background: #FF6347; left: 20%; animation-duration: 2.5s;"></div>
-        <div class="confetti" style="background: #FFD700; left: 40%; animation-duration: 3s;"></div>
-        <div class="confetti" style="background: #ADFF2F; left: 60%; animation-duration: 2s;"></div>
+        <div class="confetti" style="background: #FF6347; left: 10%; animation-duration: 2.5s;"></div>
+        <div class="confetti" style="background: #FFD700; left: 20%; animation-duration: 3s;"></div>
+        <div class="confetti" style="background: #ADFF2F; left: 30%; animation-duration: 2s;"></div>
+        <div class="confetti" style="background: #1E90FF; left: 40%; animation-duration: 3.5s;"></div>
+        <div class="confetti" style="background: #FF6347; left: 50%; animation-duration: 2.5s;"></div>
+        <div class="confetti" style="background: #FFD700; left: 60%; animation-duration: 3s;"></div>
+        <div class="confetti" style="background: #ADFF2F; left: 70%; animation-duration: 2s;"></div>
         <div class="confetti" style="background: #1E90FF; left: 80%; animation-duration: 3.5s;"></div>
+        <div class="confetti" style="background: #FF6347; left: 90%; animation-duration: 2.5s;"></div>
+        <div class="confetti" style="background: #FFD700; left: 15%; animation-duration: 3s;"></div>
+        <div class="confetti" style="background: #ADFF2F; left: 25%; animation-duration: 2s;"></div>
+        <div class="confetti" style="background: #1E90FF; left: 35%; animation-duration: 3.5s;"></div>
     </div>
 
     <h1>歡迎來到我的網站</h1>
