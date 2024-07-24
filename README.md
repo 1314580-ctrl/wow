@@ -20,25 +20,16 @@
             height: 315px; /* Height for displaying video */
             overflow: hidden;
             text-align: center;
-            background-color: #000; /* Background color for button */
+            background-color: transparent; /* Transparent background for button */
         }
         .button.youtube {
-            background-color: #FF0000; /* YouTube 颜色 */
-        }
-        .button.youtube:hover {
-            background-color: #CC0000; /* YouTube 颜色的深一点的变体 */
+            border: 3px solid #FF0000; /* YouTube border color */
         }
         .button.discord {
-            background-color: #7289DA; /* Discord 颜色 */
-        }
-        .button.discord:hover {
-            background-color: #5b6eae; /* Discord 颜色的深一点的变体 */
+            border: 3px solid #7289DA; /* Discord border color */
         }
         .button.instagram {
-            background-color: #C13584; /* Instagram 颜色 */
-        }
-        .button.instagram:hover {
-            background-color: #a02d6d; /* Instagram 颜色的深一点的变体 */
+            border: 3px solid #C13584; /* Instagram border color */
         }
         .button-container {
             display: flex;
@@ -60,11 +51,7 @@
             width: 100%;
             height: 100%;
             display: block;
-        }
-        .video-section h2 {
-            font-size: 24px;
-            color: #333;
-            margin: 10px 0;
+            border: none; /* Remove default iframe border */
         }
         .youtube-icon {
             position: absolute;
@@ -83,7 +70,7 @@
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
-            <i class="fab fa-youtube"></i> YouTube
+            <i class="fab fa-youtube youtube-icon"></i> YouTube
         </a>
         <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
             <i class="fab fa-discord"></i> Discord
@@ -96,7 +83,6 @@
     <div class="video-container">
         <div class="video-section">
             <a href="#" class="button youtube" style="display: block;">
-                <i class="fab fa-youtube youtube-icon"></i>
                 <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
         </div>
@@ -106,13 +92,6 @@
             </a>
         </div>
     </div>
-
-    <footer style="margin-top: 20px; font-size: 14px; color: #666;">
-        © 2024 你的名字。保留所有权利。
-    </footer>
-
-</body>
-</html>
 
     <footer style="margin-top: 20px; font-size: 14px; color: #666;">
         © 2024 你的名字。保留所有权利。
