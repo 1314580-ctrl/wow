@@ -21,7 +21,6 @@
             background: #ffffff;
         }
 
-        /* Welcome animation container */
         #welcome-container {
             position: fixed;
             top: 0;
@@ -60,7 +59,6 @@
                 transform: translateY(100vh) rotate(720deg);
             }
         }
-        /* Additional confetti colors and positions */
         .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
         .confetti:nth-child(2) { background: #FFD700; left: 15%; animation-duration: 3s; }
         .confetti:nth-child(3) { background: #ADFF2F; left: 25%; animation-duration: 2s; }
@@ -72,7 +70,6 @@
         .confetti:nth-child(9) { background: #FF8C00; left: 85%; animation-duration: 2.7s; }
         .confetti:nth-child(10) { background: #DA70D6; left: 95%; animation-duration: 3s; }
         
-        /* Buttons and other styles */
         .button {
             display: inline-block;
             color: #fff;
@@ -179,7 +176,7 @@
 <body>
     <!-- Music player -->
     <audio id="background-music" autoplay loop>
-        <source src="https://github.com/username/repository/raw/main/path/to/audio-file.mp3" type="audio/mpeg">
+        <source src="https://drive.google.com/file/d/1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j/view?usp=sharing" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
