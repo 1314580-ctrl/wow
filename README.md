@@ -197,9 +197,9 @@
         Your browser does not support the audio element.
     </audio>
 
+    <!-- Welcome animation -->
     <div id="welcome-container">
-        <div class="welcome-text">歡迎</div>
-        <!-- Add multiple confetti divs for the effect -->
+        <div class="welcome-text">欢迎</div>
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
@@ -212,8 +212,8 @@
         <div class="confetti"></div>
     </div>
 
-    <h1>歡迎來到我的網站</h1>
-    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <h1>欢迎来到我的网站</h1>
+    <p>在这里你可以访问我的 YouTube 频道和加入我的 Discord 群组。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -233,12 +233,12 @@
     <div class="video-container">
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
-            <span class="title">YouTube 最多觀看量</span>
+            <span class="title">YouTube 最多观看量</span>
             <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video-section" style="background-color: #C13584;">
             <i class="fab fa-instagram icon"></i>
-            <span class="title">Instagram 視頻</span>
+            <span class="title">Instagram 视频</span>
             <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
