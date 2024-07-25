@@ -40,7 +40,7 @@
         }
         .welcome-text {
             font-size: 50px;
-            color: #333;
+            color: #333; /* Keep text color black */
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             animation: welcome-animation 3s ease forwards;
             position: relative;
@@ -176,9 +176,9 @@
             100% { background-position: 0% 0%; }
         }
         @keyframes welcome-animation {
-            0% { transform: scale(1); opacity: 1; color: #333; }
-            50% { transform: scale(1.1); opacity: 0.8; color: #FF6347; }
-            100% { transform: scale(1); opacity: 0; color: #333; }
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0; }
         }
     </style>
 </head>
