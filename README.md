@@ -16,7 +16,6 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            position: relative;
             background: #ffffff;
         }
 
@@ -191,13 +190,13 @@
     </style>
 </head>
 <body>
-    <!-- 音频播放器 -->
+    <!-- Music player -->
     <audio id="background-music" autoplay loop>
-        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
+        <source src="https://github.com/username/repository/raw/main/path/to/audio-file.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- 欢迎动画 -->
+    <!-- Welcome animation -->
     <div id="welcome-container">
         <div class="welcome-text">欢迎</div>
         <div class="confetti"></div>
