@@ -1,4 +1,69 @@
-<!DOCTYPE html>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, rgba(0, 0, 0, 0.7) 80%);
+    }
+
+    .glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        filter: blur(80px);
+        transform: translate(-50%, -50%);
+        animation: glowAnimation 5s infinite alternate;
+        z-index: -1;
+    }
+
+    @keyframes glowAnimation {
+        0% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+</style>
+<body>
+    <div class="glow"></div>
+    <!-- 其余内容 -->
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
