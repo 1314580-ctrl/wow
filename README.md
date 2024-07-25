@@ -9,16 +9,17 @@
         body {
             margin: 0; 
             padding: 0; 
-            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
             text-align: center; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
             align-items: center; 
             height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #FF6347, #FFD700, #1E90FF, #32CD32);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            position: relative;
         }
 
         /* Welcome animation container */
@@ -41,12 +42,7 @@
             font-size: 50px;
             color: #333;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: welcome-animation 3s forwards;
-        }
-        @keyframes welcome-animation {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 0; }
+            z-index: 1;
         }
         .confetti {
             position: absolute;
@@ -57,8 +53,12 @@
             animation: confetti-fall 3s infinite;
         }
         @keyframes confetti-fall {
-            0% { transform: translateY(-100vh) rotate(0deg); }
-            100% { transform: translateY(100vh) rotate(720deg); }
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+            }
         }
         /* Additional confetti colors and positions */
         .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
@@ -98,13 +98,6 @@
         .button:active {
             transform: scale(0.95);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        .button:hover i {
-            animation: rotate 1s linear infinite;
-        }
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
         .button.youtube {
             background-color: #FF0000;
@@ -175,11 +168,18 @@
             font-size: 14px;
             color: #666;
         }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
     </style>
 </head>
 <body>
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
+        <!-- Add multiple confetti divs for the effect -->
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
