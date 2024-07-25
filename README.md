@@ -192,7 +192,7 @@
 <body>
     <!-- Music player -->
     <audio id="background-music" autoplay loop>
-        <source src="https://github.com/username/repository/raw/main/path/to/audio-file.mp3" type="audio/mpeg">
+        <source src="https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/7.25.MP3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
