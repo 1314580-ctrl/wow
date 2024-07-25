@@ -190,15 +190,15 @@
     </style>
 </head>
 <body>
-    <!-- Music player -->
+    <!-- 音樂播放器 -->
     <audio id="background-music" autoplay loop>
-        <source src="https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/7.25.MP3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
+        您的瀏覽器不支援音頻元素。
     </audio>
 
-    <!-- Welcome animation -->
+    <!-- 歡迎動畫 -->
     <div id="welcome-container">
-        <div class="welcome-text">欢迎</div>
+        <div class="welcome-text">歡迎</div>
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
@@ -211,8 +211,8 @@
         <div class="confetti"></div>
     </div>
 
-    <h1>欢迎来到我的网站</h1>
-    <p>在这里你可以访问我的 YouTube 频道和加入我的 Discord 群组。</p>
+    <h1>歡迎來到我的網站</h1>
+    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -232,17 +232,17 @@
     <div class="video-container">
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
-            <span class="title">YouTube 最多观看量</span>
+            <span class="title">YouTube 最多觀看量</span>
             <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="video-section" style="background-color: #C13584;">
             <i class="fab fa-instagram icon"></i>
-            <span class="title">Instagram 视频</span>
+            <span class="title">Instagram 視頻</span>
             <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
-    <footer>© 2024 ru03and1314580。保留所有权利。</footer>
+    <footer>© 2024 ru03and1314580。保留所有權利。</footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
