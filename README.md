@@ -16,8 +16,6 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: #FFFFFF; /* Initial background color */
-            transition: background 2s ease; /* Transition for background color change */
             position: relative;
         }
 
@@ -169,11 +167,6 @@
             color: #666;
         }
 
-        @keyframes gradient-animation {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
-        }
         @keyframes welcome-animation {
             0% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.1); opacity: 0.8; }
@@ -237,9 +230,6 @@
                 welcomeContainer.style.opacity = '0';
                 setTimeout(function() {
                     welcomeContainer.style.display = 'none';
-                    document.body.style.background = 'linear-gradient(45deg, #FF6347, #FFD700, #1E90FF, #32CD32)';
-                    document.body.style.backgroundSize = '400% 400%';
-                    document.body.style.animation = 'gradient-animation 15s ease infinite';
                 }, 1000); // Delay to match the transition duration
             }, 3000); // Duration to show the welcome message
         });
