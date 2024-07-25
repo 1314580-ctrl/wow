@@ -21,7 +21,6 @@
             height: 100vh;
         }
 
-        /* Welcome animation container */
         #welcome-container {
             position: fixed;
             top: 0;
@@ -62,7 +61,6 @@
             }
         }
 
-        /* Additional confetti colors and positions */
         .confetti:nth-child(1) { background: #FF6347; left: 2%; animation-duration: 2.5s; }
         .confetti:nth-child(2) { background: #FFD700; left: 4%; animation-duration: 3s; }
         .confetti:nth-child(3) { background: #ADFF2F; left: 6%; animation-duration: 2s; }
@@ -127,11 +125,37 @@
             position: relative;
             text-align: center;
             min-width: 250px;
-            height: 150px; /* Adjust height to fit icon and text */
+            height: 150px;
             vertical-align: middle;
             background-size: cover;
             background-position: center;
             overflow: hidden;
+        }
+
+        .button:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            animation: showTooltip 0.3s forwards;
+        }
+
+        @keyframes showTooltip {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
         }
 
         .button.youtube {
@@ -223,6 +247,18 @@
             font-size: 14px;
             color: #666;
         }
+
+        /* 添加滚动动画 */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -277,27 +313,32 @@
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
     </div>
 
-    <h1>歡迎來到我的網站</h1>
-    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <audio id="background-music" src="your-music-file.mp3" autoplay loop></audio>
 
-    <div class="button-container">
-        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
+    <h1 class="animate-on-scroll">歡迎來到我的網站</h1>
+    <p class="animate-on-scroll">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+
+    <div class="button-container animate-on-scroll">
+        <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube" data-tooltip="訪問我的 YouTube 頻道">
             <i class="fab fa-youtube"></i>
             <span>YouTube</span>
         </a>
-        <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord">
+        <a href="https://discord.com/invite/e5cbzGFS3H" class="button discord" data-tooltip="加入我的 Discord 群組">
             <i class="fab fa-discord"></i>
             <span>Discord</span>
         </a>
-        <a href="https://www.instagram.com/ru031314580/" class="button instagram">
+        <a href="https://www.instagram.com/ru031314580/" class="button instagram" data-tooltip="訪問我的 Instagram">
             <i class="fab fa-instagram"></i>
             <span>ru031314580</span>
         </a>
     </div>
 
-    <div class="video-container">
+    <div class="video-container animate-on-scroll">
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
@@ -310,17 +351,30 @@
         </div>
     </div>
 
-    <footer>© 2024 ru03and1314580。保留所有权利。</footer>
+    <footer class="animate-on-scroll">
+        &copy; 2024 我的網站. 版權所有.
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function() {
-                var welcomeContainer = document.getElementById('welcome-container');
-                welcomeContainer.style.opacity = '0';
-                setTimeout(function() {
-                    welcomeContainer.style.display = 'none';
-                }, 1000); // Delay to match the transition duration
-            }, 3000); // Duration to show the welcome message
+            const confettiElements = document.querySelectorAll(".confetti");
+
+            confettiElements.forEach((confetti, index) => {
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDelay = `${Math.random() * 2}s`;
+            });
+
+            setTimeout(() => {
+                document.getElementById('welcome-container').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('welcome-container').style.display = 'none';
+                }, 1000);
+            }, 3000);
+
+            const elements = document.querySelectorAll(".animate-on-scroll");
+            elements.forEach(element => {
+                element.classList.add("visible");
+            });
         });
     </script>
 </body>
