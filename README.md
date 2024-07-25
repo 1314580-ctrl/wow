@@ -6,51 +6,6 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /*全屏加载条*/
-        #loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .loading-bar {
-            width: 80%;
-            max-width: 600px;
-            background: #eee;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .loading-bar-inner {
-            width: 0;
-            height: 10px;
-            background: #FF6347;
-            animation: loading 3s infinite;
-        }
-
-        @keyframes loading {
-            0% {
-                width: 0;
-            }
-            50% {
-                width: 100%;
-            }
-            100% {
-                width: 0;
-            }
-        }
-
-        /* 页面主体样式 */
         body {
             margin: 0; 
             padding: 0; 
@@ -66,6 +21,7 @@
             height: 100vh;
         }
 
+        /* Welcome animation container */
         #welcome-container {
             position: fixed;
             top: 0;
@@ -85,6 +41,12 @@
             font-size: 50px;
             color: #333;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: welcome-animation 3s forwards;
+        }
+        @keyframes welcome-animation {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0; }
         }
         .confetti {
             position: absolute;
@@ -95,13 +57,10 @@
             animation: confetti-fall 3s infinite;
         }
         @keyframes confetti-fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(720deg);
-            }
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(720deg); }
         }
+        /* Additional confetti colors and positions */
         .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
         .confetti:nth-child(2) { background: #FFD700; left: 15%; animation-duration: 3s; }
         .confetti:nth-child(3) { background: #ADFF2F; left: 25%; animation-duration: 2s; }
@@ -112,7 +71,8 @@
         .confetti:nth-child(8) { background: #00BFFF; left: 75%; animation-duration: 3.4s; }
         .confetti:nth-child(9) { background: #FF8C00; left: 85%; animation-duration: 2.7s; }
         .confetti:nth-child(10) { background: #DA70D6; left: 95%; animation-duration: 3s; }
-
+        
+        /* Buttons and other styles */
         .button {
             display: inline-block;
             color: #fff;
@@ -138,6 +98,13 @@
         .button:active {
             transform: scale(0.95);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .button:hover i {
+            animation: rotate 1s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         .button.youtube {
             background-color: #FF0000;
@@ -211,14 +178,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading overlay -->
-    <div id="loading-overlay">
-        <div class="loading-bar">
-            <div class="loading-bar-inner"></div>
-        </div>
-    </div>
-
-    <!-- Welcome container -->
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <div class="confetti"></div>
@@ -267,16 +226,6 @@
     <footer>© 2024 ru03and1314580。保留所有权利。</footer>
 
     <script>
-        // Hide loading overlay when the page is fully loaded
-        window.addEventListener('load', function() {
-            var loadingOverlay = document.getElementById('loading-overlay');
-            loadingOverlay.style.opacity = '0';
-            setTimeout(function() {
-                loadingOverlay.style.display = 'none';
-            }, 1000); // Delay to match the transition duration
-        });
-
-        // Hide welcome container after the animation
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 var welcomeContainer = document.getElementById('welcome-container');
