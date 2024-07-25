@@ -6,22 +6,66 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            text-align: center;
+        /*全屏加载条*/
+        #loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .loading-bar {
+            width: 80%;
+            max-width: 600px;
+            background: #eee;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .loading-bar-inner {
+            width: 0;
+            height: 10px;
+            background: #FF6347;
+            animation: loading 3s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0;
+            }
+            50% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+            }
+        }
+
+        /* 页面主体样式 */
+        body {
+            margin: 0; 
+            padding: 0; 
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihb_12-nCE4alfZCi4zr8s7ThfOtYAXws4oeL220b5jPBar56cG20MY7NlknwrVY4aFOwWlXcV0TZGOV6jTulQnhFTiTPkqZrJQ=w1366-h641-rw-v1'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
             height: 100vh;
         }
 
-        /* Welcome animation container */
         #welcome-container {
             position: fixed;
             top: 0;
@@ -37,13 +81,11 @@
             transition: opacity 1s ease-in-out;
             overflow: hidden;
         }
-
         .welcome-text {
             font-size: 50px;
             color: #333;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         .confetti {
             position: absolute;
             width: 10px;
@@ -52,7 +94,6 @@
             opacity: 0.8;
             animation: confetti-fall 3s infinite;
         }
-
         @keyframes confetti-fall {
             0% {
                 transform: translateY(-100vh) rotate(0deg);
@@ -61,30 +102,17 @@
                 transform: translateY(100vh) rotate(720deg);
             }
         }
-
-        /* Additional confetti colors and positions */
         .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
-        .confetti:nth-child(2) { background: #FFD700; left: 10%; animation-duration: 3s; }
-        .confetti:nth-child(3) { background: #ADFF2F; left: 15%; animation-duration: 2s; }
-        .confetti:nth-child(4) { background: #1E90FF; left: 20%; animation-duration: 3.5s; }
-        .confetti:nth-child(5) { background: #FF1493; left: 25%; animation-duration: 2.8s; }
-        .confetti:nth-child(6) { background: #FF4500; left: 30%; animation-duration: 3.2s; }
-        .confetti:nth-child(7) { background: #32CD32; left: 35%; animation-duration: 2.6s; }
-        .confetti:nth-child(8) { background: #00BFFF; left: 40%; animation-duration: 3.4s; }
-        .confetti:nth-child(9) { background: #FF8C00; left: 45%; animation-duration: 2.7s; }
-        .confetti:nth-child(10) { background: #DA70D6; left: 50%; animation-duration: 3s; }
-        .confetti:nth-child(11) { background: #FF6347; left: 55%; animation-duration: 2.5s; }
-        .confetti:nth-child(12) { background: #FFD700; left: 60%; animation-duration: 3s; }
-        .confetti:nth-child(13) { background: #ADFF2F; left: 65%; animation-duration: 2s; }
-        .confetti:nth-child(14) { background: #1E90FF; left: 70%; animation-duration: 3.5s; }
-        .confetti:nth-child(15) { background: #FF1493; left: 75%; animation-duration: 2.8s; }
-        .confetti:nth-child(16) { background: #FF4500; left: 80%; animation-duration: 3.2s; }
-        .confetti:nth-child(17) { background: #32CD32; left: 85%; animation-duration: 2.6s; }
-        .confetti:nth-child(18) { background: #00BFFF; left: 90%; animation-duration: 3.4s; }
-        .confetti:nth-child(19) { background: #FF8C00; left: 95%; animation-duration: 2.7s; }
-        .confetti:nth-child(20) { background: #DA70D6; left: 100%; animation-duration: 3s; }
+        .confetti:nth-child(2) { background: #FFD700; left: 15%; animation-duration: 3s; }
+        .confetti:nth-child(3) { background: #ADFF2F; left: 25%; animation-duration: 2s; }
+        .confetti:nth-child(4) { background: #1E90FF; left: 35%; animation-duration: 3.5s; }
+        .confetti:nth-child(5) { background: #FF1493; left: 45%; animation-duration: 2.8s; }
+        .confetti:nth-child(6) { background: #FF4500; left: 55%; animation-duration: 3.2s; }
+        .confetti:nth-child(7) { background: #32CD32; left: 65%; animation-duration: 2.6s; }
+        .confetti:nth-child(8) { background: #00BFFF; left: 75%; animation-duration: 3.4s; }
+        .confetti:nth-child(9) { background: #FF8C00; left: 85%; animation-duration: 2.7s; }
+        .confetti:nth-child(10) { background: #DA70D6; left: 95%; animation-duration: 3s; }
 
-        /* Buttons and other styles */
         .button {
             display: inline-block;
             color: #fff;
@@ -103,32 +131,26 @@
             background-position: center;
             overflow: hidden;
         }
-
         .button:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
-
         .button:active {
             transform: scale(0.95);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
-
         .button.youtube {
             background-color: #FF0000;
             background: linear-gradient(45deg, #FF0000, #CC0000);
         }
-
         .button.discord {
             background-color: #7289DA;
             background: linear-gradient(45deg, #7289DA, #5b6eae);
         }
-
         .button.instagram {
             background-color: #C13584;
             background: linear-gradient(45deg, #C13584, #a02d6d);
         }
-
         .button i {
             font-size: 50px;
             position: absolute;
@@ -136,19 +158,16 @@
             left: 50%;
             transform: translateX(-50%);
         }
-
         .button span {
             display: block;
             font-size: 18px;
             margin-top: 60px;
         }
-
         .button-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .video-container {
             display: flex;
             justify-content: center;
@@ -156,7 +175,6 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
         .video-section {
             flex: 1;
             max-width: 45%;
@@ -164,7 +182,6 @@
             border-radius: 10px;
             position: relative;
         }
-
         .video-section .icon {
             font-size: 40px;
             position: absolute;
@@ -172,7 +189,6 @@
             left: 10px;
             color: #fff;
         }
-
         .video-section .title {
             position: absolute;
             top: 10px;
@@ -180,7 +196,6 @@
             font-size: 18px;
             color: #fff;
         }
-
         .video-section iframe {
             width: 100%;
             height: calc(100% - 80px);
@@ -188,7 +203,6 @@
             border: none;
             margin-top: 60px;
         }
-
         footer {
             margin-top: 20px;
             font-size: 14px;
@@ -197,19 +211,16 @@
     </style>
 </head>
 <body>
+    <!-- Loading overlay -->
+    <div id="loading-overlay">
+        <div class="loading-bar">
+            <div class="loading-bar-inner"></div>
+        </div>
+    </div>
+
+    <!-- Welcome container -->
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
-        <!-- Add multiple confetti divs for the effect -->
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
-        <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
         <div class="confetti"></div>
@@ -222,8 +233,8 @@
         <div class="confetti"></div>
     </div>
 
-    <h1 style="font-size: 36px; color: #333;">歡迎來到我的網站</h1>
-    <p style="font-size: 18px; color: #666;">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
+    <h1>歡迎來到我的網站</h1>
+    <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
     <div class="button-container">
         <a href="https://www.youtube.com/channel/UCPl1ALv9iBz0JYNtoYVB-oQ" class="button youtube">
@@ -256,6 +267,16 @@
     <footer>© 2024 ru03and1314580。保留所有权利。</footer>
 
     <script>
+        // Hide loading overlay when the page is fully loaded
+        window.addEventListener('load', function() {
+            var loadingOverlay = document.getElementById('loading-overlay');
+            loadingOverlay.style.opacity = '0';
+            setTimeout(function() {
+                loadingOverlay.style.display = 'none';
+            }, 1000); // Delay to match the transition duration
+        });
+
+        // Hide welcome container after the animation
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 var welcomeContainer = document.getElementById('welcome-container');
