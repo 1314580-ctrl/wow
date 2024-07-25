@@ -6,6 +6,7 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Add your CSS styles here */
         body {
             margin: 0;
             padding: 0;
@@ -17,6 +18,7 @@
             height: 100vh;
             overflow: hidden;
             position: relative;
+            background: #ffffff;
         }
 
         /* Welcome animation container */
@@ -37,7 +39,7 @@
         }
         .welcome-text {
             font-size: 50px;
-            color: #333; /* Keep the text color black */
+            color: #333;
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             animation: welcome-animation 3s ease forwards;
             position: relative;
@@ -175,6 +177,12 @@
     </style>
 </head>
 <body>
+    <!-- Music player -->
+    <audio id="background-music" autoplay loop>
+        <source src="https://github.com/username/repository/raw/main/path/to/audio-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <!-- Add multiple confetti divs for the effect -->
