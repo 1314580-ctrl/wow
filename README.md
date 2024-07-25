@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,6 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Add your CSS styles here */
         body {
             margin: 0;
             padding: 0;
@@ -175,12 +175,12 @@
 <body>
     <!-- Music player -->
     <audio id="background-music" autoplay loop>
-        <source src="https://drive.google.com/file/d/1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j/view?usp=sharing" type="audio/mpeg">
+        <source src="https://drive.google.com/file/d/1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j/view?usp=sharing">
         Your browser does not support the audio element.
     </audio>
 
     <div id="welcome-container">
-        <div class="welcome-text">歡迎</div>
+        <div class="welcome-text">歡迎-_-</div>
         <!-- Add multiple confetti divs for the effect -->
         <div class="confetti"></div>
         <div class="confetti"></div>
