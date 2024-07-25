@@ -41,8 +41,9 @@
         .welcome-text {
             font-size: 50px;
             color: #333;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            animation: welcome-animation 3s ease forwards;
+            position: relative;
         }
         .confetti {
             position: absolute;
@@ -50,7 +51,7 @@
             height: 30px;
             background: #ff0;
             opacity: 0.8;
-            animation: confetti-fall 3s infinite;
+            animation: confetti-fall 4s infinite;
         }
         @keyframes confetti-fall {
             0% {
@@ -173,6 +174,11 @@
             0% { background-position: 0% 0%; }
             50% { background-position: 100% 100%; }
             100% { background-position: 0% 0%; }
+        }
+        @keyframes welcome-animation {
+            0% { transform: scale(1); opacity: 1; color: #333; }
+            50% { transform: scale(1.1); opacity: 0.8; color: #FF6347; }
+            100% { transform: scale(1); opacity: 0; color: #333; }
         }
     </style>
 </head>
