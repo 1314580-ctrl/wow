@@ -231,6 +231,8 @@
         <div class="confetti"></div>
     </div>
 
+    <audio id="background-music" src="your-music-file.mp3" autoplay loop></audio>
+
     <h1 class="animate-on-scroll">歡迎來到我的網站</h1>
     <p class="animate-on-scroll">在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
@@ -262,37 +264,29 @@
         </div>
     </div>
 
-    <div class="video-section">
-        <h2>背景音樂</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_aPUro7sq9o?autoplay=1&loop=1&playlist=_aPUro7sq9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
     <footer>
         © 2024 ru03and1314580。保留所有权利。
     </footer>
 
     <script>
-        // 欢迎动画
-        window.addEventListener('load', function() {
-            const welcomeContainer = document.getElementById('welcome-container');
-            setTimeout(() => {
-                welcomeContainer.style.opacity = '0';
-                setTimeout(() => welcomeContainer.style.display = 'none', 1000);
-            }, 3000); // 显示3秒钟，然后慢慢消失
-        });
-
         // 滚动动画
-        function handleScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(element => {
-                if (element.getBoundingClientRect().top < window.innerHeight) {
+        document.addEventListener('scroll', function() {
+            var elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(function(element) {
+                var elementPosition = element.getBoundingClientRect();
+                if (elementPosition.top < window.innerHeight && elementPosition.bottom > 0) {
                     element.classList.add('visible');
                 }
             });
-        }
+        });
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // 初始化时检查可见性
+        // 隐藏欢迎界面
+        setTimeout(function() {
+            document.getElementById('welcome-container').style.opacity = 0;
+            setTimeout(function() {
+                document.getElementById('welcome-container').style.display = 'none';
+            }, 1000);
+        }, 5000);
     </script>
 </body>
 </html>
