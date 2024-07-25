@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -16,46 +16,9 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: linear-gradient(45deg, #FF6347, #FFD700, #1E90FF, #32CD32);
-            background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
+            background: #FFFFFF; /* Initial background color */
+            transition: background 2s ease; /* Transition for background color change */
             position: relative;
-        }
-
-        /* Dynamic rain background */
-        .rain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-        .rain::before, .rain::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            pointer-events: none;
-            z-index: 1;
-        }
-        .rain::before {
-            animation: rain-animation 0.5s linear infinite;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .rain::after {
-            animation: rain-animation 0.7s linear infinite;
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        @keyframes rain-animation {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
         }
 
         /* Welcome animation container */
@@ -205,7 +168,7 @@
             font-size: 14px;
             color: #666;
         }
-        
+
         @keyframes gradient-animation {
             0% { background-position: 0% 0%; }
             50% { background-position: 100% 100%; }
@@ -219,8 +182,6 @@
     </style>
 </head>
 <body>
-    <div class="rain"></div>
-    
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <!-- Add multiple confetti divs for the effect -->
@@ -276,6 +237,9 @@
                 welcomeContainer.style.opacity = '0';
                 setTimeout(function() {
                     welcomeContainer.style.display = 'none';
+                    document.body.style.background = 'linear-gradient(45deg, #FF6347, #FFD700, #1E90FF, #32CD32)';
+                    document.body.style.backgroundSize = '400% 400%';
+                    document.body.style.animation = 'gradient-animation 15s ease infinite';
                 }, 1000); // Delay to match the transition duration
             }, 3000); // Duration to show the welcome message
         });
