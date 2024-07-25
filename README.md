@@ -1,5 +1,4 @@
 
-
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -8,19 +7,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            margin: 0; 
-            padding: 0; 
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
             overflow: hidden;
             background: linear-gradient(45deg, #FF6347, #FFD700, #1E90FF, #32CD32);
             background-size: 400% 400%;
             animation: gradient-animation 15s ease infinite;
             position: relative;
+        }
+
+        /* Dynamic rain background */
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .rain::before, .rain::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .rain::before {
+            animation: rain-animation 0.5s linear infinite;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .rain::after {
+            animation: rain-animation 0.7s linear infinite;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes rain-animation {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
         }
 
         /* Welcome animation container */
@@ -41,7 +76,7 @@
         }
         .welcome-text {
             font-size: 50px;
-            color: #333; /* Keep text color black */
+            color: #333; /* Keep the text color black */
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             animation: welcome-animation 3s ease forwards;
             position: relative;
@@ -184,6 +219,8 @@
     </style>
 </head>
 <body>
+    <div class="rain"></div>
+    
     <div id="welcome-container">
         <div class="welcome-text">歡迎</div>
         <!-- Add multiple confetti divs for the effect -->
