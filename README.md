@@ -191,13 +191,13 @@
     </style>
 </head>
 <body>
-    <!-- Music player -->
+    <!-- 音频播放器 -->
     <audio id="background-music" autoplay loop>
         <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
-    <!-- Welcome animation -->
+    <!-- 欢迎动画 -->
     <div id="welcome-container">
         <div class="welcome-text">欢迎</div>
         <div class="confetti"></div>
