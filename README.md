@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,6 @@
     <title>我的 YouTube 和 Discord</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Add your CSS styles here */
         body {
             margin: 0;
             padding: 0;
@@ -35,6 +35,7 @@
             transition: opacity 1s ease-in-out;
             overflow: hidden;
         }
+
         .welcome-text {
             font-size: 50px;
             color: #333;
@@ -42,6 +43,7 @@
             animation: welcome-animation 3s ease forwards;
             position: relative;
         }
+
         .confetti {
             position: absolute;
             width: 10px;
@@ -50,6 +52,7 @@
             opacity: 0.8;
             animation: confetti-fall 4s infinite;
         }
+
         @keyframes confetti-fall {
             0% {
                 transform: translateY(-100vh) rotate(0deg);
@@ -58,6 +61,7 @@
                 transform: translateY(100vh) rotate(720deg);
             }
         }
+
         .confetti:nth-child(1) { background: #FF6347; left: 5%; animation-duration: 2.5s; }
         .confetti:nth-child(2) { background: #FFD700; left: 15%; animation-duration: 3s; }
         .confetti:nth-child(3) { background: #ADFF2F; left: 25%; animation-duration: 2s; }
@@ -68,7 +72,7 @@
         .confetti:nth-child(8) { background: #00BFFF; left: 75%; animation-duration: 3.4s; }
         .confetti:nth-child(9) { background: #FF8C00; left: 85%; animation-duration: 2.7s; }
         .confetti:nth-child(10) { background: #DA70D6; left: 95%; animation-duration: 3s; }
-        
+
         .button {
             display: inline-block;
             color: #fff;
@@ -87,26 +91,32 @@
             background-position: center;
             overflow: hidden;
         }
+
         .button:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
+
         .button:active {
             transform: scale(0.95);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         .button.youtube {
             background-color: #FF0000;
             background: linear-gradient(45deg, #FF0000, #CC0000);
         }
+
         .button.discord {
             background-color: #7289DA;
             background: linear-gradient(45deg, #7289DA, #5b6eae);
         }
+
         .button.instagram {
             background-color: #C13584;
             background: linear-gradient(45deg, #C13584, #a02d6d);
         }
+
         .button i {
             font-size: 50px;
             position: absolute;
@@ -114,16 +124,19 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .button span {
             display: block;
             font-size: 18px;
             margin-top: 60px;
         }
+
         .button-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+
         .video-container {
             display: flex;
             justify-content: center;
@@ -131,6 +144,7 @@
             margin-top: 20px;
             flex-wrap: wrap;
         }
+
         .video-section {
             flex: 1;
             max-width: 45%;
@@ -138,6 +152,7 @@
             border-radius: 10px;
             position: relative;
         }
+
         .video-section .icon {
             font-size: 40px;
             position: absolute;
@@ -145,6 +160,7 @@
             left: 10px;
             color: #fff;
         }
+
         .video-section .title {
             position: absolute;
             top: 10px;
@@ -152,6 +168,7 @@
             font-size: 18px;
             color: #fff;
         }
+
         .video-section iframe {
             width: 100%;
             height: calc(100% - 80px);
@@ -159,6 +176,7 @@
             border: none;
             margin-top: 60px;
         }
+
         footer {
             margin-top: 20px;
             font-size: 14px;
@@ -175,8 +193,7 @@
 <body>
     <!-- Music player -->
     <audio id="background-music" autoplay loop>
-        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j
-" type="audio/mpeg">
+        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
