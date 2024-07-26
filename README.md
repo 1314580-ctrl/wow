@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,15 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: #ffffff;
+            background: url('/mnt/data/yt頭像.PNG') no-repeat center center;
+            background-size: cover;
+            animation: backgroundAnimation 10s linear infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
 
         #welcome-container {
@@ -252,6 +261,9 @@
                     welcomeContainer.style.display = 'none';
                 }, 1000); // Delay to match the transition duration
             }, 3000); // Duration to show the welcome message
+
+            var audio = document.getElementById('background-music');
+            audio.play();
         });
     </script>
 </body>
