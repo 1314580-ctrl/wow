@@ -18,13 +18,6 @@
             overflow: hidden;
             background: url('/mnt/data/yt頭像.PNG') no-repeat center center;
             background-size: cover;
-            animation: backgroundAnimation 10s linear infinite;
-        }
-
-        @keyframes backgroundAnimation {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
         }
 
         #welcome-container {
@@ -201,7 +194,6 @@
     <!-- 音樂播放器 -->
     <audio id="background-music" autoplay loop>
         <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
-        您的瀏覽器不支援音頻元素。
     </audio>
 
     <!-- 歡迎動畫 -->
