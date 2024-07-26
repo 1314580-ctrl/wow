@@ -16,7 +16,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: url('/mnt/data/yt頭像.PNG') no-repeat center center;
+            background: url('https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/yt.PNG') no-repeat center center;
             background-size: cover;
         }
 
@@ -193,7 +193,8 @@
 <body>
     <!-- 音樂播放器 -->
     <audio id="background-music" autoplay loop>
-        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
+        <source src="https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/7.25.MP3" type="audio/mpeg">
+        您的瀏覽器不支援音頻元素。
     </audio>
 
     <!-- 歡迎動畫 -->
@@ -225,7 +226,7 @@
         </a>
         <a href="https://www.instagram.com/ru031314580/" class="button instagram">
             <i class="fab fa-instagram"></i>
-            <span>ru031314580</span>
+            <span>Instagram</span>
         </a>
     </div>
 
@@ -233,30 +234,28 @@
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBiI"></iframe>
         </div>
-        <div class="video-section" style="background-color: #C13584;">
-            <i class="fab fa-instagram icon"></i>
-            <span class="title">Instagram 視頻</span>
-            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
+        <div class="video-section" style="background-color: #7289DA;">
+            <i class="fab fa-discord icon"></i>
+            <span class="title">Discord 推薦影片</span>
+            <iframe src="https://www.youtube.com/embed/NU-2H98BcdY"></iframe>
         </div>
     </div>
 
-    <footer>© 2024 ru03and1314580。保留所有權利。</footer>
+    <footer>
+        &copy; 2024 我的網站。保留所有權利。
+    </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        window.onload = function() {
             setTimeout(function() {
-                var welcomeContainer = document.getElementById('welcome-container');
-                welcomeContainer.style.opacity = '0';
+                document.getElementById('welcome-container').style.opacity = '0';
                 setTimeout(function() {
-                    welcomeContainer.style.display = 'none';
-                }, 1000); // Delay to match the transition duration
-            }, 3000); // Duration to show the welcome message
-
-            var audio = document.getElementById('background-music');
-            audio.play();
-        });
+                    document.getElementById('welcome-container').style.display = 'none';
+                }, 1000);
+            }, 3000);
+        };
     </script>
 </body>
 </html>
