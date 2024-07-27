@@ -17,6 +17,28 @@
             height: 100vh;
             overflow: hidden;
             background: #ffffff;
+            position: relative;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/yt.PNG');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         #welcome-container {
@@ -211,6 +233,11 @@
         <div class="confetti"></div>
     </div>
 
+    <!-- 背景動態效果 -->
+    <div id="background">
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
     <h1>歡迎來到我的網站</h1>
     <p>在這裡你可以訪問我的 YouTube 頻道和加入我的 Discord 群組。</p>
 
@@ -246,6 +273,62 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            var canvas = document.getElementById('particle-canvas');
+            var context = canvas.getContext('2d');
+            var particles = [];
+            var colors = ['#FF6347', '#FFD700', '#ADFF2F', '#1E90FF', '#FF1493', '#FF4500', '#32CD32', '#00BFFF', '#FF8C00', '#DA70D6'];
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            function createParticle(x, y) {
+                var size = Math.random() * 5 + 5;
+                var speedX = Math.random() * 5 - 2.5;
+                var speedY = Math.random() * 5 - 2.5;
+                var color = colors[Math.floor(Math.random() * colors.length)];
+                particles.push({ x, y, size, speedX, speedY, color });
+            }
+
+            function updateParticles() {
+                for (var i = particles.length - 1; i >= 0; i--) {
+                    var p = particles[i];
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+                    p.size *= 0.95;
+                    if (p.size < 0.5) particles.splice(i, 1);
+                }
+            }
+
+            function drawParticles() {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                for (var p of particles) {
+                    context.beginPath();
+                    context.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    context.fillStyle = p.color;
+                    context.fill();
+                }
+            }
+
+            function animate() {
+                updateParticles();
+                drawParticles();
+                requestAnimationFrame(animate);
+            }
+
+            canvas.addEventListener('click', function(event) {
+                var rect = canvas.getBoundingClientRect();
+                var x = event.clientX - rect.left;
+                var y = event.clientY - rect.top;
+                for (var i = 0; i < 100; i++) createParticle(x, y);
+            });
+
+            animate();
+
             setTimeout(function() {
                 var welcomeContainer = document.getElementById('welcome-container');
                 welcomeContainer.style.opacity = '0';
