@@ -38,7 +38,7 @@
 
         .welcome-text {
             font-size: 50px;
-            color: #333;
+            color: #000;
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             animation: welcome-animation 3s ease forwards;
             position: relative;
@@ -234,28 +234,29 @@
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBiI"></iframe>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="video-section" style="background-color: #7289DA;">
             <i class="fab fa-discord icon"></i>
-            <span class="title">Discord 推薦影片</span>
-            <iframe src="https://www.youtube.com/embed/NU-2H98BcdY"></iframe>
+            <span class="title">Discord 伺服器</span>
+            <iframe src="https://discord.com/widget?id=1234567890&theme=dark" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
     <footer>
-        &copy; 2024 我的網站。保留所有權利。
+        &copy; 2024 我的網站. 版權所有.
     </footer>
 
     <script>
-        window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('welcome-container').style.opacity = '0';
-                setTimeout(function() {
-                    document.getElementById('welcome-container').style.display = 'none';
+        window.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(() => {
+                const welcomeContainer = document.getElementById('welcome-container');
+                welcomeContainer.style.opacity = '0';
+                setTimeout(() => {
+                    welcomeContainer.style.display = 'none';
                 }, 1000);
             }, 3000);
-        };
+        });
     </script>
 </body>
 </html>
