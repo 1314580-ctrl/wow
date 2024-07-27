@@ -16,8 +16,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
-            background: url('https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/yt.PNG') no-repeat center center;
-            background-size: cover;
+            background: #ffffff;
         }
 
         #welcome-container {
@@ -38,7 +37,7 @@
 
         .welcome-text {
             font-size: 50px;
-            color: #000;
+            color: #333;
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             animation: welcome-animation 3s ease forwards;
             position: relative;
@@ -193,7 +192,7 @@
 <body>
     <!-- 音樂播放器 -->
     <audio id="background-music" autoplay loop>
-        <source src="https://github.com/1314580-ctrl/wow/releases/download/v1%2C0%2C0/7.25.MP3" type="audio/mpeg">
+        <source src="https://drive.google.com/uc?export=download&id=1m7AxUKzPSRQUJ699Q0EVd1j3mS6YrU8j" type="audio/mpeg">
         您的瀏覽器不支援音頻元素。
     </audio>
 
@@ -226,7 +225,7 @@
         </a>
         <a href="https://www.instagram.com/ru031314580/" class="button instagram">
             <i class="fab fa-instagram"></i>
-            <span>Instagram</span>
+            <span>ru031314580</span>
         </a>
     </div>
 
@@ -234,28 +233,26 @@
         <div class="video-section" style="background-color: #FF0000;">
             <i class="fab fa-youtube icon"></i>
             <span class="title">YouTube 最多觀看量</span>
-            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/JMNBEQ_xBi8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <div class="video-section" style="background-color: #7289DA;">
-            <i class="fab fa-discord icon"></i>
-            <span class="title">Discord 伺服器</span>
-            <iframe src="https://discord.com/widget?id=1234567890&theme=dark" frameborder="0" allowfullscreen></iframe>
+        <div class="video-section" style="background-color: #C13584;">
+            <i class="fab fa-instagram icon"></i>
+            <span class="title">Instagram 視頻</span>
+            <iframe src="https://www.instagram.com/reel/C5akynxJREi/embed" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
-    <footer>
-        &copy; 2024 我的網站. 版權所有.
-    </footer>
+    <footer>© 2024 ru03and1314580。保留所有權利。</footer>
 
     <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            setTimeout(() => {
-                const welcomeContainer = document.getElementById('welcome-container');
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var welcomeContainer = document.getElementById('welcome-container');
                 welcomeContainer.style.opacity = '0';
-                setTimeout(() => {
+                setTimeout(function() {
                     welcomeContainer.style.display = 'none';
-                }, 1000);
-            }, 3000);
+                }, 1000); // Delay to match the transition duration
+            }, 3000); // Duration to show the welcome message
         });
     </script>
 </body>
